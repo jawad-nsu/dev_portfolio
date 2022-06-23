@@ -4,7 +4,6 @@ import {
   Box,
   Container,
   Heading,
-  Link,
   Image,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -55,13 +54,11 @@ const Page = () => {
           He has a keen interest in Microservice, system design & recently
           started to learn DevOps. Currently, He’s working as a Backend
           Developer at a European FinTech Startup called{' '}
-          <a
-            target="_blank"
-            href="https://eucaps.com/"
-            rel="noopener noreferrer"
-          >
-            <Link>Eucaps.com</Link>
-          </a>
+          <NextLink href="https://www.eucaps.com/" passHref>
+            <a target="_blank" rel="noopener noreferrer">
+              Eucaps.com
+            </a>
+          </NextLink>
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/work">
