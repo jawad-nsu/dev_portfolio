@@ -5,11 +5,13 @@ import {
   Container,
   Heading,
   Image,
-  useColorModeValue
+  useColorModeValue,
+  Link
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../components/section'
 import Paragraph from './../components/paragraph'
+import { BioYear, BioSection } from '../components/bio'
 const Page = () => {
   return (
     <Container>
@@ -54,19 +56,51 @@ const Page = () => {
           He has a keen interest in Microservice, system design & recently
           started to learn DevOps. Currently, He’s working as a Backend
           Developer at a European FinTech Startup called{' '}
-          <NextLink href="https://www.eucaps.com/" passHref>
-            <a target="_blank" rel="noopener noreferrer">
-              Eucaps.com
-            </a>
-          </NextLink>
+          <Link href="https://www.eucaps.com/" target="_blank">
+            Eucaps.com
+          </Link>
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/work">
+          <NextLink href="/works">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
           </NextLink>
         </Box>
+      </Section>
+      <Section deplay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Graduated B.Sc in Computer Science & Engineering from North South
+          University
+        </BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Worked as a Frontend Developer for a Local RealEstate Startup{' '}
+          <Link href="https://www.greeho.com/" target="_blank">
+            Greeho.com
+          </Link>
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Working as a Backend Developer for a European FinTech Startup{' '}
+          <Link href="https://www.eucaps.com/" target="_blank">
+            Eucaps.com
+          </Link>
+        </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ♥
+        </Heading>
+        <Paragraph>
+          Movies, Anime, Gardening, Sports, Kayaking, Microservice Architecture,
+          System Design, DevOps
+        </Paragraph>
       </Section>
     </Container>
   )
